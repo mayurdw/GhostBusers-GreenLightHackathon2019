@@ -2,6 +2,7 @@ package com.example.ghostbusers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,5 +22,7 @@ public class HadAProblemActivity extends AppCompatActivity {
 
     public void onSubmitButton(View view) {
         showToast("Problem Report Submitted");
+        Intent journeyPlanner = new Intent(this, JourneyPlannerActivity.class);
+        startActivity(journeyPlanner);
     }
 }
