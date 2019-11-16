@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">GhostBusers</string>
     <string name="start_app">Start App</string>
+    <string name="i_had_another_problem">I had Another Problem</string>
+    <string name="i_am_stuck">I am Stuck</string>
+    <string name="didn_t_arrive">Did not arrive</string>
+    <string name="early_of_late">Early or Late</string>
 </resources>

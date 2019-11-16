@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HadAProblemActivity">
+
+    <ImageButton
+        android:id="@+id/early_or_late"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/early_of_late"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/stat_sys_warning"
+        android:onClick="problemClicked"/>
+
+    <ImageButton
+        android:id="@+id/didnt_arrive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/early_or_late"
+        app:srcCompat="@android:drawable/ic_dialog_map"
+        android:contentDescription="@string/didn_t_arrive"
+        android:onClick="problemClicked"/>
+
+    <ImageButton
+        android:id="@+id/im_stuck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/didnt_arrive"
+        app:srcCompat="@android:drawable/ic_media_pause"
+        android:contentDescription="@string/i_am_stuck"
+        android:onClick="problemClicked"/>
+
+    <ImageButton
+        android:id="@+id/another"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_stuck"
+        app:srcCompat="@android:drawable/stat_notify_more"
+        android:contentDescription="@string/i_had_another_problem"
+        android:onClick="problemClicked"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

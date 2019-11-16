@@ -2,6 +2,7 @@ package com.example.ghostbusers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startApp(View view){
-
+        Intent newActivity = new Intent(this, HadAProblemActivity.class);
+        startActivity(newActivity);
     }
 }
