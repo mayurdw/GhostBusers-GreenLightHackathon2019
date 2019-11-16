@@ -18,7 +18,7 @@
         android:layout_marginRight="32dp"
         android:text="@string/report_a_problem"
         android:textAlignment="center"
-        android:textColor="@color/colorBlack"
+        android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,42 +72,41 @@
 
     <ImageButton
         android:id="@+id/running_late"
+        style="@style/icon_button_right"
         android:contentDescription="@string/running_late"
         android:onClick="onSubmitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@android:drawable/ic_dialog_alert"
-        style="@style/icon_button_right" />
+        app:srcCompat="@android:drawable/sym_action_email" />
 
     <ImageButton
         android:id="@+id/did_not_arrive"
+        style="@style/icon_button_left"
         android:contentDescription="@string/didn_t_arrive"
         android:onClick="onSubmitButton"
         app:layout_constraintEnd_toStartOf="@+id/i_am_stuck"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/running_early"
-        app:srcCompat="@android:drawable/ic_dialog_alert"
-        style="@style/icon_button_left"/>
+        app:srcCompat="@android:drawable/stat_notify_missed_call" />
 
     <ImageButton
         android:id="@+id/i_am_stuck"
+        style="@style/icon_button_right"
         android:contentDescription="@string/i_am_stuck"
         android:onClick="onSubmitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/running_late"
-        app:srcCompat="@android:drawable/ic_dialog_alert"
-        style="@style/icon_button_right"/>
+        app:srcCompat="@android:drawable/sym_contact_card" />
 
     <ImageButton
         android:id="@+id/too_full"
+        style="@style/icon_button_left"
+        android:contentDescription="@string/too_full"
         android:onClick="onSubmitButton"
         app:layout_constraintEnd_toStartOf="@+id/trip_cancelled"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/did_not_arrive"
-        app:srcCompat="@android:drawable/ic_dialog_alert"
-        android:contentDescription="@string/too_full"
-        style="@style/icon_button_left"
-        />
+        app:srcCompat="@android:drawable/ic_dialog_alert" />
 
     <ImageButton
         android:id="@+id/trip_cancelled"
@@ -120,13 +119,13 @@
 
     <ImageButton
         android:id="@+id/weather_issue"
+        style="@style/icon_button_left"
+        android:contentDescription="@string/weather_issue"
         android:onClick="onSubmitButton"
         app:layout_constraintEnd_toStartOf="@+id/other"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/too_full"
-        app:srcCompat="@android:drawable/ic_dialog_alert"
-        android:contentDescription="@string/weather_issue"
-        style="@style/icon_button_left"/>
+        app:srcCompat="@android:drawable/ic_menu_compass" />
 
     <ImageButton
         android:id="@+id/other"
@@ -136,5 +135,86 @@
         app:srcCompat="@android:drawable/ic_dialog_alert"
         android:contentDescription="@string/i_had_another_problem"
         style="@style/icon_button_right"/>
+
+    <TextView
+        android:id="@+id/early_icon_label"
+        android:text="@string/Early"
+        app:layout_constraintBottom_toTopOf="@+id/did_not_arrive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/running_early"
+        app:layout_constraintVertical_bias="0.0"
+        style="@style/button_label_left" />
+
+    <TextView
+        android:id="@+id/did_not_arrive_label"
+        style="@style/button_label_left"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:text="@string/didn_t_arrive"
+        app:layout_constraintBottom_toTopOf="@+id/too_full"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/did_not_arrive"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/too_full_label"
+        style="@style/button_label_left"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:text="@string/too_full"
+        app:layout_constraintBottom_toTopOf="@+id/weather_issue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/too_full"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/weather_issue_label"
+        style="@style/button_label_left"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:text="@string/weather_issue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather_issue" />
+
+    <TextView
+        android:id="@+id/running_late_label"
+        style="@style/button_label_right"
+        android:text="@string/running_late"
+        app:layout_constraintBottom_toTopOf="@+id/i_am_stuck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintStart_toEndOf="@+id/early_icon_label"
+        app:layout_constraintTop_toBottomOf="@+id/running_late"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/i_am_stuck_label"
+        style="@style/button_label_right"
+        android:text="@string/i_am_stuck"
+        app:layout_constraintBottom_toTopOf="@+id/trip_cancelled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toEndOf="@+id/did_not_arrive_label"
+        app:layout_constraintTop_toBottomOf="@+id/i_am_stuck"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/trip_cancelled_label"
+        style="@style/button_label_right"
+        android:text="@string/trip_cancelled"
+        app:layout_constraintBottom_toTopOf="@+id/other"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toEndOf="@+id/too_full_label"
+        app:layout_constraintTop_toBottomOf="@+id/trip_cancelled"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/other_label"
+        style="@style/button_label_right"
+        android:text="@string/other"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weather_issue_label"
+        app:layout_constraintTop_toBottomOf="@+id/other" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

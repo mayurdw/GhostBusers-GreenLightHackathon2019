@@ -30,4 +30,22 @@
         <item name="android:tint">#0C0C0C</item>
     </style>
 
+    <style name="button_label_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">104dp</item>
+        <item name="android:layout_marginLeft">104dp</item>
+        <item name="android:textColor">@android:color/background_dark</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="button_label_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">40sp</item>
+        <item name="android:textColor">@android:color/background_dark</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
